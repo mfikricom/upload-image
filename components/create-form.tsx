@@ -10,12 +10,14 @@ const CreateForm = () => {
   return (
     <form action={formAction}>
       {/* Alert */}
-      <div
-        className="p-4 mb-4 text-sm text-red-800 rounded-lg bg-red-50"
-        role="alert"
-      >
-        <div className="font-medium">{state?.message}</div>
-      </div>
+      {state?.message ? (
+        <div
+          className="p-4 mb-4 text-sm text-red-800 rounded-lg bg-red-50"
+          role="alert"
+        >
+          <div className="font-medium">{state?.message}</div>
+        </div>
+      ) : null}
 
       <div className="mb-4 pt-2">
         <input
